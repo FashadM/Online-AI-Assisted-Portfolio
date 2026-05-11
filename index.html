@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Fashad K. Morrison | Elite Portfolio</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <style>
+
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      font-family:'Inter', sans-serif;
+
+      background:#050816;
+
+      color:white;
+
+      overflow-x:hidden;
+
+    }
+
+    body::before{
+
+      content:"";
+
+      position:fixed;
+
+      width:700px;
+      height:700px;
+
+      background:#00ff99;
+
+      filter:blur(180px);
+
+      opacity:0.08;
+
+      top:-250px;
+      right:-150px;
+
+      z-index:-1;
+
+    }
+
+    /* =========================================
+       SCROLLBAR
+    ========================================= */
+
+    ::-webkit-scrollbar{
+      width:10px;
+    }
+
+    ::-webkit-scrollbar-track{
+      background:#050816;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#00ff99;
+      border-radius:20px;
+    }
+
+    /* =========================================
+       NAVBAR
+    ========================================= */
+
+    header{
+
+      position:fixed;
+
+      width:100%;
+
+      top:0;
+
+      z-index:1000;
+
+      padding:22px 8%;
+
+      background:rgba(5,8,22,0.75);
+
+      backdrop-filter:blur(14px);
+
+      border-bottom:1px solid rgba(255,255,255,0.06);
+
+    }
+
+    .navbar{
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+    }
+
+    .logo{
+
+      font-size:2rem;
+
+      font-weight:800;
+
+      letter-spacing:2px;
+
+    }
+
+    .logo span{
+      color:#00ff99;
+    }
+
+    .nav-links{
+
+      display:flex;
+
+      list-style:none;
+
+      gap:35px;
+
+    }
+
+    .nav-links a{
+
+      color:white;
+
+      text-decoration:none;
+
+      font-size:0.95rem;
+
+      transition:0.3s ease;
+
+    }
+
+    .nav-links a:hover{
+
+      color:#00ff99;
+
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero{
+
+      min-height:100vh;
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+      gap:80px;
+
+      padding:140px 8% 100px;
+
+      position:relative;
+
+    }
+
+    .hero-content{
+
+      flex:1;
+
+      max-width:720px;
+
+    }
+
+    .small-title{
+
+      color:#00ff99;
+
+      letter-spacing:3px;
+
+      margin-bottom:20px;
+
+      font-size:0.9rem;
+
+    }
+
+    .hero-content h1{
+
+      font-size:5rem;
+
+      line-height:1;
+
+      margin-bottom:20px;
+
+      font-weight:800;
+
+    }
+
+    .hero-subtitle{
+
+      font-size:1.5rem;
+
+      color:#d6d6d6;
+
+      margin-bottom:25px;
+
+      font-weight:500;
+
+    }
+
+    .hero-description{
+
+      color:#b8b8b8;
+
+      line-height:1.8;
+
+      max-width:650px;
+
+      font-size:1.1rem;
+
+      margin-bottom:40px;
+
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    .hero-buttons{
+
+      display:flex;
+
+      gap:20px;
+
+      flex-wrap:wrap;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+      padding:16px 34px;
+
+      border-radius:14px;
+
+      text-decoration:none;
+
+      font-weight:600;
+
+      transition:0.3s ease;
+
+    }
+
+    .primary-btn{
+
+      background:#00ff99;
+
+      color:#050816;
+
+    }
+
+    .primary-btn:hover{
+
+      transform:translateY(-5px);
+
+      box-shadow:0 12px 35px rgba(0,255,153,0.3);
+
+    }
+
+    .secondary-btn{
+
+      border:1px solid rgba(255,255,255,0.1);
+
+      color:white;
+
+      background:rgba(255,255,255,0.03);
+
+    }
+
+    .secondary-btn:hover{
+
+      border-color:#00ff99;
+
+      color:#00ff99;
+
+      transform:translateY(-5px);
+
+    }
+
+    /* =========================================
+       RIGHT SIDE
+    ========================================= */
+
+    .hero-right{
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:30px;
+
+      align-items:center;
+
+    }
+
+    /* =========================================
+       PROFILE IMAGE
+    ========================================= */
+
+    .profile-image-container{
+
+      width:380px;
+
+      height:470px;
+
+      border-radius:32px;
+
+      overflow:hidden;
+
+      position:relative;
+
+      background:rgba(255,255,255,0.03);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.45),
+        0 0 40px rgba(0,255,153,0.12);
+
+    }
+
+    .profile-image{
+
+      width:100%;
+
+      height:100%;
+
+      object-fit:cover;
+
+      display:block;
+
+    }
+
+    /* =========================================
+       HERO CARD
+    ========================================= */
+
+    .hero-card{
+
+      width:380px;
+
+      padding:35px;
+
+      border-radius:28px;
+
+      background:rgba(255,255,255,0.03);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(12px);
+
+    }
+
+    .hero-card h3{
+
+      margin-bottom:30px;
+
+      font-size:1.3rem;
+
+    }
+
+    .focus-item{
+
+      display:flex;
+
+      justify-content:space-between;
+
+      margin-bottom:10px;
+
+    }
+
+    .bar{
+
+      width:100%;
+
+      height:8px;
+
+      background:rgba(255,255,255,0.08);
+
+      border-radius:20px;
+
+      overflow:hidden;
+
+      margin-bottom:20px;
+
+    }
+
+    .fill{
+
+      height:100%;
+
+      background:#00ff99;
+
+    }
+
+    .fill.one{
+      width:94%;
+    }
+
+    .fill.two{
+      width:90%;
+    }
+
+    .fill.three{
+      width:87%;
+    }
+
+    /* =========================================
+       SECTIONS
+    ========================================= */
+
+    section{
+
+      padding:120px 8%;
+
+    }
+
+    .section-title{
+
+      margin-bottom:70px;
+
+    }
+
+    .section-title p{
+
+      color:#00ff99;
+
+      letter-spacing:3px;
+
+      margin-bottom:10px;
+
+    }
+
+    .section-title h2{
+
+      font-size:3rem;
+
+    }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+
+    .about-text{
+
+      max-width:950px;
+
+    }
+
+    .about-text p{
+
+      color:#c2c2c2;
+
+      margin-bottom:25px;
+
+      line-height:1.9;
+
+      font-size:1.05rem;
+
+    }
+
+    /* =========================================
+       GRID SYSTEMS
+    ========================================= */
+
+    .skills-grid,
+    .projects-grid{
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+      gap:30px;
+
+    }
+
+    /* =========================================
+       CARDS
+    ========================================= */
+
+    .skill-card,
+    .project-card{
+
+      padding:35px;
+
+      border-radius:24px;
+
+      background:rgba(255,255,255,0.03);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(10px);
+
+      transition:0.4s ease;
+
+    }
+
+    .skill-card:hover,
+    .project-card:hover{
+
+      transform:translateY(-10px);
+
+      border-color:#00ff99;
+
+    }
+
+    .skill-card i{
+
+      font-size:2rem;
+
+      color:#00ff99;
+
+      margin-bottom:20px;
+
+    }
+
+    .skill-card h3,
+    .project-card h3{
+
+      margin-bottom:18px;
+
+    }
+
+    .skill-card p,
+    .project-card p{
+
+      color:#bdbdbd;
+
+      line-height:1.8;
+
+    }
+
+    .project-link{
+
+      display:inline-block;
+
+      margin-top:20px;
+
+      color:#00ff99;
+
+      text-decoration:none;
+
+      font-weight:600;
+
+    }
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+
+    .contact-container{
+
+      display:flex;
+
+      gap:20px;
+
+      flex-wrap:wrap;
+
+    }
+
+    .contact-container a{
+
+      padding:16px 28px;
+
+      border-radius:14px;
+
+      text-decoration:none;
+
+      color:white;
+
+      background:rgba(255,255,255,0.03);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      transition:0.3s ease;
+
+    }
+
+    .contact-container a:hover{
+
+      transform:translateY(-5px);
+
+      border-color:#00ff99;
+
+      color:#00ff99;
+
+    }
+
+    .contact-container i{
+
+      margin-right:10px;
+
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer{
+
+      padding:40px 8%;
+
+      text-align:center;
+
+      color:#9f9f9f;
+
+      border-top:1px solid rgba(255,255,255,0.06);
+
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media(max-width:1100px){
+
+      .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+      }
+
+      .hero-content{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+
+        font-size:3.2rem;
+
+      }
+
+      .section-title h2{
+
+        font-size:2.3rem;
+
+      }
+
+      .profile-image-container,
+      .hero-card{
+
+        width:100%;
+
+      }
+
+      .profile-image-container{
+
+        height:420px;
+
+      }
+
+      .nav-links{
+
+        gap:18px;
+
+        font-size:0.9rem;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header>
+
+    <nav class="navbar">
+
+      <div class="logo">
+        FKM<span>.</span>
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Expertise</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#github">GitHub</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <!-- LEFT -->
+
+    <div class="hero-content">
+
+      <p class="small-title">
+        WINSTON-SALEM STATE UNIVERSITY
+      </p>
+
+      <h1>
+        Fashad K. Morrison
+      </h1>
+
+      <h2 class="hero-subtitle">
+        Information Technology Student at Winston-Salem State University
+      </h2>
+
+      <p class="hero-description">
+        Web Developer & Database Management focused on building
+        enterprise-level digital experiences, scalable systems,
+        and modern user-focused applications.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="Resume.pdf"
+          target="_blank"
+          class="primary-btn"
+        >
+          View Resume
+        </a>
+
+        <a
+          href="https://github.com/FashadM/Caldwell-Class"
+          target="_blank"
+          class="secondary-btn"
+        >
+          GitHub Project
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="hero-right">
+
+      <!-- PROFILE IMAGE -->
+
+      <div class="profile-image-container">
+
+        <!-- SAVE YOUR IMAGE AS profile.jpg -->
+
+        <img
+          src="./profile.jpg"
+          alt="Fashad Morrison"
+          class="profile-image"
+        >
+
+      </div>
+
+      <!-- TECH CARD -->
+
+      <div class="hero-card">
+
+        <h3>Technical Focus</h3>
+
+        <div class="focus-item">
+          <span>Web Development</span>
+          <span>94%</span>
+        </div>
+
+        <div class="bar">
+          <div class="fill one"></div>
+        </div>
+
+        <div class="focus-item">
+          <span>Database Management</span>
+          <span>90%</span>
+        </div>
+
+        <div class="bar">
+          <div class="fill two"></div>
+        </div>
+
+        <div class="focus-item">
+          <span>Enterprise Systems</span>
+          <span>87%</span>
+        </div>
+
+        <div class="bar">
+          <div class="fill three"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+
+      <p>ABOUT</p>
+
+      <h2>Professional Profile</h2>
+
+    </div>
+
+    <div class="about-text">
+
+      <p>
+        I am an Information Technology student at Winston-Salem State University
+        with experience in software engineering, web development,
+        enterprise systems, and database management.
+      </p>
+
+      <p>
+        My focus is building scalable digital solutions that combine
+        modern design, strong backend architecture,
+        and enterprise-level performance.
+      </p>
+
+      <p>
+        I have worked on responsive web platforms,
+        database systems, administrative dashboards,
+        and community-focused digital solutions.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-title">
+
+      <p>EXPERTISE</p>
+
+      <h2>Technical Skills</h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-code"></i>
+
+        <h3>Frontend Development</h3>
+
+        <p>
+          HTML5, CSS3, JavaScript,
+          responsive design, accessibility,
+          animations, and UI systems.
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-server"></i>
+
+        <h3>Backend Development</h3>
+
+        <p>
+          Python, Java, APIs,
+          server-side logic,
+          authentication systems,
+          and application architecture.
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h3>Database Management</h3>
+
+        <p>
+          SQL, MySQL, MongoDB,
+          relational databases,
+          optimization, and data systems.
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-network-wired"></i>
+
+        <h3>Networking</h3>
+
+        <p>
+          TCP/IP, DNS, DHCP,
+          troubleshooting,
+          routing fundamentals,
+          and network security.
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-computer"></i>
+
+        <h3>Software & Tools</h3>
+
+        <p>
+          GitHub, Git, VS Code,
+          Microsoft Office,
+          Adobe Suite,
+          and Google Workspace.
+        </p>
+
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h3>Enterprise Systems</h3>
+
+        <p>
+          Administrative dashboards,
+          workflow automation,
+          scalable systems,
+          and system integration.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="section-title">
+
+      <p>PORTFOLIO</p>
+
+      <h2>Featured Projects</h2>
+
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <h3>Forsyth Senior Services Platform</h3>
+
+        <p>
+          Community-focused digital resource platform designed
+          to help older adults access programs,
+          support services, and local community resources.
+        </p>
+
+        <a
+          href="https://ashersbrown.wixsite.com/forsyth-senior-servi"
+          target="_blank"
+          class="project-link"
+        >
+          View Live Project →
+        </a>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Caldwell-Class Repository</h3>
+
+        <p>
+          Professional GitHub repository containing
+          enterprise software engineering projects,
+          portfolio development,
+          and technical coursework.
+        </p>
+
+        <a
+          href="https://github.com/FashadM/Caldwell-Class"
+          target="_blank"
+          class="project-link"
+        >
+          View Repository →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GITHUB -->
+
+  <section id="github">
+
+    <div class="section-title">
+
+      <p>GITHUB</p>
+
+      <h2>All GitHub Repositories</h2>
+
+    </div>
+
+    <div
+      id="github-projects"
+      class="projects-grid"
+    ></div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="section-title">
+
+      <p>CONTACT</p>
+
+      <h2>Let’s Connect</h2>
+
+    </div>
+
+    <div class="contact-container">
+
+      <a
+        href="mailto:fmorrison124@rams.wssu.edu"
+      >
+        <i class="fa-solid fa-envelope"></i>
+        Email
+      </a>
+
+      <a
+        href="https://github.com/FashadM"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Fashad K. Morrison • Elite Portfolio
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    /* LOAD GITHUB REPOS */
+
+    async function loadRepos(){
+
+      const container =
+        document.getElementById("github-projects");
+
+      try{
+
+        const response = await fetch(
+          "https://api.github.com/users/FashadM/repos?sort=updated&per_page=100"
+        );
+
+        const repos = await response.json();
+
+        repos.forEach(repo => {
+
+          const card =
+            document.createElement("div");
+
+          card.classList.add("project-card");
+
+          card.innerHTML = `
+
+            <h3>${repo.name}</h3>
+
+            <p>
+              ${
+                repo.description ||
+                "Professional software repository."
+              }
+            </p>
+
+            <a
+              href="${repo.html_url}"
+              target="_blank"
+              class="project-link"
+            >
+              View Repository →
+            </a>
+
+          `;
+
+          container.appendChild(card);
+
+        });
+
+      }catch(error){
+
+        container.innerHTML =
+          "<p>GitHub repositories failed to load.</p>";
+
+      }
+
+    }
+
+    loadRepos();
+
+  </script>
+
+</body>
+</html>
